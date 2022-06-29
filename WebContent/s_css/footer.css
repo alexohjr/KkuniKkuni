@@ -1,0 +1,44 @@
+.footer {
+	color: black;
+	height: 280px;
+	margin: auto;
+	border-top: 2px solid #FD999A;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #FD999A;
+}
+
+.link_text {
+	/* margin: 10px 0px 0px 115px; */
+	width: 1100px;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.link_text a {
+	margin-right: 80px;
+}
+
+.content{
+	width: 1100px;
+	margin: auto;/* 순서 : 위 오른쪽 아래 왼쪽 */
+	margin-top: 25px;/* 순서 : 위 오른쪽 아래 왼쪽 */
+}
+
+.footer_logo {
+	width: 250px;
+	margin: auto;
+}
+
+.footer_text{
+	width: 800px;
+	margin-top: 70px;
+	line-height: 20px;
+}

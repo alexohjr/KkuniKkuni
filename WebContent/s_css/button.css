@@ -1,0 +1,45 @@
+.btn {
+	width: 100px;
+	height: 40px;  
+	border-radius: 5px;
+	border: 0px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+
+td .btn {
+	width: 70px;
+	height: 25px;  
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.sm_a{
+	text-decoration: none;
+	color: black;
+}
+
+.btn_p {
+	background-color: #DF7785;
+	color: white;
+}
+
+.btn_b {
+	background-color: #444F59;
+	color: white;
+}
+
+.btn_bodysearch{
+	font-size:15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 0px 5px 5px 0px;
+	margin-left: 0px;
+	background-color: #FD999A;
+}
+
+.body_search {
+	height: 27.5px;
+	border: 0.1px solid #E4E4E4;
+	margin-right: -7px;
+}

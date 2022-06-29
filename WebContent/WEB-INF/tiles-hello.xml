@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="admin_header" template="/admin_header.jsp"/>
+	<definition name="admin_menu" template="/admin_menu.jsp"/>
+	
+	<definition name="enterprise_menu" template="/enterprise_menu.jsp"/>
+	<definition name="enterprise_header" template="/enterprise_header.jsp"/>
+	
+	<definition name="header" template="/header.jsp"/>
+	<definition name="footer" template="/footer.jsp"/>
+
+	<definition name="nav" template="/nav.jsp"/>
+	<definition name="navservice" template="/navservice.jsp"/>
+	
+	<definition name="item_detail" template="/item_detail.jsp"/>
+	
+</tiles-definitions>
+
+

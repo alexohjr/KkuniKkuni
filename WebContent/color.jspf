@@ -1,0 +1,6 @@
+<c:set var="babypink_c" value="#FEC8C9"/> <!-- 연분 -->
+<c:set var="pink_c" value="#FD999A"/> <!-- 대표 -->
+<c:set var="hotpink_c" value="#DF7785"/> <!-- 진분 -->
+<c:set var="lightblack_c" value="#444F59"/> <!-- 연검 -->
+<c:set var="darkblack_c" value="#3E4149"/> <!-- 진검  -->
+<c:set var="gray_c" value="#E4E4E4"/> <!-- 테두리  -->

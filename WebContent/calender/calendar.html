@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>calendar</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>   
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script>
+	var holidays = {
+	"0101":{type:0, title:"신정", year:""},
+	"0301":{type:0, title:"삼일절", year:""},
+	"0505":{type:0, title:"어린이날", year:""},
+	"0606":{type:0, title:"현충일", year:""},
+	"0815":{type:0, title:"광복절", year:""},
+	"1003":{type:0, title:"개천절", year:""},
+	"1009":{type:0, title:"한글날", year:""},
+	"1225":{type:0, title:"크리스마스", year:""},
+	
+    	"0924":{type:0, title:"추석", year:"2018"},
+    	"0925":{type:0, title:"추석연휴", year:"2018"},
+	"0926":{type:0, title:"추석연휴", year:"2018"},
+    };
+
+$( function() {
+    	$( "#datepicker" ).datepicker({
+      	inline: true,
+		autoSize: false, 
+      	showOtherMonths: true,
+      	dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+	   	monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", 
+        			"7월", "8월", "9월", "10월", "11월", "12월" ] ,
+		 nextText: "다음달" ,
+		 prevText: "이전달" ,
+		 currentText: '오늘',
+		 yearSuffix: '년',
+		 minDate: new Date(2015,3-1,1),   
+		 maxDate: new Date(2025,2-1,28),
+		 buttonImageOnly: true, 
+		// showButtonPanel: true,
+         showMonthAfterYear:true,
+		 beforeShowDay: function(day) {
+			var result;
+			var type = holidays[$.datepicker.formatDate(type)];
+			var holiday = holidays[$.datepicker.formatDate("mmdd",day )];
+			var thisYear = $.datepicker.formatDate("yy", day);
+	
+			if (holiday) {
+				if(thisYear == holiday.year || holiday.year == "") {
+					if(1 == holiday.type )
+					{
+						result =  [true, "date-schedule", holiday.title];
+					}
+					
+					else if(2 == holiday.type )
+					{
+						result =  [true, "date-schedule2", holiday.title];
+					}
+					else if(3 == holiday.type )
+					{
+						result =  [true, "date-schedule3", holiday.title];
+					}
+					
+					else
+					{
+						result =  [true, "date-holiday", holiday.title];
+					}
+				}
+			}
+
+			if(!result) {
+				switch (day.getDay()) {
+					case 0: // 일요일확인
+						result = [true, "date-sunday"];
+						break;
+					case 6: // 토요일확인
+						result = [true, "date-saturday"];
+						break;
+					default:
+						result = [true, ""];
+						break;
+				}
+			}
+
+			return result;
+		}
+	});
+});
+</script>
+	    <script type="text/javascript" language="javascript">
+		
+		function Alert() {
+			var date = $("#datepicker").datepicker('getDate');
+			month = date.getMonth()+1;
+
+			$(document).on('click','.ui-datepicker-next',function(){
+			month=month+1;
+			if(month<1 ||month==13)
+			{
+				if(month<2)
+				{
+					month=12;
+				}
+				if(month==13)
+				{
+					month=1;
+				}
+			}
+			});
+			
+			$(document).on('click','.ui-datepicker-prev',function(){
+			month=month-1;
+			if(month<1 ||month==13)
+			{
+				if(month<1)
+				{
+					month=12;
+				}
+				if(month==13)
+				{
+					month=1;
+				}
+			}
+			});
+
+			}
+    </script>
+
+<style>
+.date-sunday .ui-state-default { color:#FF5A5A; font-weight:bold; }
+.date-saturday .ui-state-default { color:#5AAEFF; font-weight:bold; }
+.date-holiday .ui-state-default { color:red; font-weight:bold; }
+.date-schedule .ui-state-default { 
+	font-weight:bold;
+	background-image:url(images/icon.png);
+	background-size:25px;
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+	
+.date-schedule2 .ui-state-default { 
+	color:#FF5A5A;
+	font-weight:bold;
+	background-image:url(images/icon.png);
+	background-size:25px;
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+	
+.date-schedule3 .ui-state-default { 
+	color:#5AAEFF;
+	font-weight:bold;
+	background-image:url(images/icon.png);
+	background-size:25px;
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+
+</style>
+
+</head>
+<body onLoad="Alert()">
+<div id="datepicker">
+</div>
+
+</body>
+</html>

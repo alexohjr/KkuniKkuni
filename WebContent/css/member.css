@@ -1,0 +1,76 @@
+.myPage_logo{
+	width: 250px;
+	margin: auto;
+}
+.myPage_category{
+	width: 80px;
+	margin: auto;
+}
+.main_category{
+	width: 350px;
+	margin: auto;
+}
+.main_slider{
+	width: 1440px;
+	height:450px;
+	margin: auto;
+}
+ .td{
+ width:200px;
+ }
+
+.myPage_order{
+	width:200px;
+	margin:outo;
+}
+.member_menu{
+	text-align:center;
+	color: black;
+}
+a {
+	text-decoration: none;
+	color:  black;
+}
+.menu{
+	border: 1px solid red;
+	background-color : white;
+
+	width: 200px;
+	margin-left: 225px;
+	display : inline;
+	float : left;
+}
+
+.list {
+    height: 50px;
+ }
+
+.list a:focus {
+    color: #DF7785;
+ }
+ .body_size{
+	margin-top: 80px;
+	border: 0px;
+	height: 1000px;
+	width: 1440px;
+	margin : outo;
+	padding-left:200px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.btn_p {
+	background-color: #DF7785;
+	color: white;
+	width: 100px;
+	height: 40px;  
+	border-radius: 5px;
+	border: 0px;
+	margin-top: 10px;
+}
+}
+
+.btn_b {
+	background-color: #444F59;
+	color: white;
+}
